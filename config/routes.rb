@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   post "/experiences" => "experiences#create"
 
+  post "/users" => "users#create"
+
 
 end
