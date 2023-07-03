@@ -10,4 +10,20 @@ class ExperiencesController < ApplicationController
     render :show
   end
 
+  def new
+    @experience = Experience.new
+    render :show
+  end
+
+  def create
+    @experience = Experience.new(
+      name: params[:name],
+      note: params[:note],
+      date: params[:date],
+      address: params[:address]
+    )
+    @experience.save
+    render :show
+  end
+
 end
